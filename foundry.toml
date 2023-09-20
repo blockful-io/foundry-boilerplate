@@ -3,4 +3,10 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
+[fmt]
+line_length = 80
+int_types = "short"
+number_underscore = "thousands"
+ignore = []
+
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

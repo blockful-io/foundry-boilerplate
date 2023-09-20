@@ -1,4 +1,4 @@
-## Foundry
+## Foundry Boilerplate
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
@@ -8,6 +8,15 @@ Foundry consists of:
 -   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
 -   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
 -   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+
+
+## Getting started
+
+### Installation
+
+- Install [Foundry](https://getfoundry.sh/).
+- Run `make install` to install the git hooks.
+
 
 ## Documentation
 

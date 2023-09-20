@@ -17,7 +17,7 @@ contract CounterTest is Test {
         assertEq(counter.number(), 1);
     }
 
-    function testSetNumber(uint256 x) public {
+    function testSetNumber(uint x) public {
         counter.setNumber(x);
         assertEq(counter.number(), x);
     }
