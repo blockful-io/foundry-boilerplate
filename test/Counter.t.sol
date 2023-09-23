@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {Test, console2} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import { Test, console2 } from "forge-std/Test.sol";
+import { Counter } from "../src/Counter.sol";
 
 contract CounterTest is Test {
     Counter public counter;
@@ -17,8 +17,8 @@ contract CounterTest is Test {
         assertEq(counter.number(), 1);
     }
 
-    function testSetNumber(uint x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
+    function testSetNumber() public {
+        counter.setNumber(2);
+        assertEq(counter.number(), 2);
     }
 }

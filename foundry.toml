@@ -5,8 +5,11 @@ libs = ["lib"]
 
 [fmt]
 line_length = 80
-int_types = "short"
+bracket_spacing = true
 number_underscore = "thousands"
-ignore = []
 
-# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+# Compilation
+optimizer = true
+optimizer_runs = 10_000
+via_ir = true
+

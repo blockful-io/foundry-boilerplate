@@ -6,4 +6,10 @@ install:
 	bash script/install_hook.sh
 
 test-fork-mainnet:
-	forge test --fork-url https://eth-mainnet.g.alchemy.com/v2/HLKVSBpAV2shOAOQ-iDYJtcSt7EDkfwQ
+	forge test --fork-url ${RPC_URL} --fork-block-number 18188620 -vvvv
+
+format:
+	forge fmt
+
+snapshot:
+	forge snapshot
