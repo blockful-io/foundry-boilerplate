@@ -1,75 +1,60 @@
-## Foundry Boilerplate
+## Delay Shield
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**A decentralized insurance contract for delayed flights, using Chainlink Functions.**
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-
-## Getting started
+Chainlink Functions was the main technology being used in the project.
 
 ### Installation
 
 - Install [Foundry](https://getfoundry.sh/).
 - Run `make install` to install the git hooks.
-
-
-## Documentation
-
-https://book.getfoundry.sh/
+- Copy the ".env.example" file and rename it to ".env", filling the variables
+- Make sure your wallet is funded with link, ETH and you are on Sepolia
 
 ## Usage
 
-### Build
+In order to run the complete flow of buying an insurance to getting refunded, we have 6 steps:
+
+### Deploy the main contract that integrate with Chainlink function consumer
 
 ```shell
-$ forge build
+$ make step-1
 ```
 
-### Test
+### Provide liquidity to the protocol
+
+You can provide liquitidy to earn the yield when the flights don't delay.
 
 ```shell
-$ forge test
+$ make step-2
 ```
 
-### Format
+### Buy insurance
+
+Now you select a flight to be covered if it gets delayed
 
 ```shell
-$ forge fmt
+$ make step-3
 ```
 
-### Gas Snapshots
+### Subscribe the contract on chainlink functions dashboard
+
+https://functions.chain.link/
+
+Access this website and follow the steps
+
+### Claim your insurance
 
 ```shell
-$ forge snapshot
+$ make step-4
 ```
 
-### Anvil
+### Read if the state is true or false for the claim
 
 ```shell
-$ anvil
+$ make step-5
 ```
 
-### Deploy
+-
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+That's it, have great trips!
